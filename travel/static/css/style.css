@@ -1,0 +1,18 @@
+p.para {background: #00000040;padding: 8px 71px;}
+.rows{position: absolute;color: white;}
+.social-icons a span{width: 44px;height: 39px;background: url('../images/social-icons.png') no-repeat 0px 0px;display:inline-block;margin: 0 0.5em;height: 150px;}
+.social-icons a span.facebook{background-position: 0px 0px;}
+.social-icons a span.twitter{background-position:-63px 0px;}
+.social-icons a span.googleplus{background-position: -127px 0px;}
+.social-icons a span.pinterest{background-position: -190px 0px;}
+.social-icons a span.instagram{background-position :-254px 0px}
+.social-icons a span:hover{opacity:0.4;}
+.col-sm-3 a{color:black;display: block;} 
+.mt{margin-top: 10%;width: 50%;}
+nav ul li a:hover{border: 1px solid #60b0e6;}
+input[type=submit]:hover {background-color: #57a8ff;color: white;}
+.topp tr td{padding: 7px 0px;}
+
+@media (max-width: 576px){.rows{top: 17%;margin-left: 6px; font-size: 14px;}p.para {padding: 8px 11px;}nav ul li a:hover{width: fit-content;}}
+@media (min-width: 576px){.fors{width: 50% !important;margin: auto;display: inline-block;}.rows{top: 25%;margin-left: 10px;font-size: 20px;}}
+@media (min-width: 1200px){.rows{top: 35%;font-size: 43px;margin-left: 58px;}}
