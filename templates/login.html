@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <script src="{% static 'js/jquery-3.5.1.slim.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <title>login</title>
+</head>
+<body>
+   <nav class="navbar navbar-expand-md bg-white navbar-light border-bottom">
+      <a href="/" class="navbar-brand"><img src="{% static 'images/logo.jpg' %}" alt="" width='120px'></a>
+      <button class="navbar-toggler" data-toggle='collapse' data-target='#navbar01' aria-controls='navbar01' aria-expanded='false' type='button' aria-label='Toggle navigation'><span class="navbar-toggler-icon"></span></button> 
+      <div class='collapse navbar-collapse' id="navbar01">
+      <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+              <a class="nav-link" href="/">Home</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="/#about">About</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="/#gallery">Gallery</a>
+          </li>
+          <!-- <li class="nav-item">
+              <a class="nav-link" href="/#contact">Contact</a>
+          </li> -->
+            </li><li class="nav-item">
+                <a class="nav-link" href="/destination">Destination</a>
+            </li>
+          <li class="nav-item">
+              <a class="nav-link" href="register">Register</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="login">Login</a>
+          </li>
+      </ul>
+      </div>
+  </nav>
+   <div class="container mb-5">
+      <hr>
+      <div class="card bg-light text-center">
+         <article class="card-body mx-auto " style="width: 450px;" >
+            <h4 class="card-title">Login Account</h4>
+            <p>Get started with your free account</p>
+           <form action="login" method="POST">
+              {% csrf_token %}
+              <div class="form-group input-group">
+               <div class="input-group-append"><span class="input-group-text"> <i class="fa fa-envelope"></i></span></div>
+               <input type="text" placeholder="Username" class="form-control" name="user" >
+            </div>
+            <div class="form-group input-group">
+               <div class="input-group-append"><span class="input-group-text"> <i class="fa fa-lock"></i></span></div>
+               <input type="password" placeholder="Password" class="form-control" name="pass" >
+            </div>
+            <input type="submit" value="Login to Account" class="btn btn-primary round form-control">
+            <p>Don't have an account? <a href="register">Register</a></p>
+           </form>
+         </article>
+      </div>
+   </div>
+   <div class="container p-3 text-center">
+    {% for message in messages %}
+    <h3 class="text-danger"> {{message}}  </h3>
+    {% endfor %}
+    </div>
+</body>
+</html>
